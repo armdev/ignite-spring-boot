@@ -1,0 +1,32 @@
+server:
+  port: 9090
+  
+#undertow:
+#   buffer-size: 1073741824
+#   direct-buffers: 1073741824
+#   io-threads: 100000
+#   worker-threads: 100000
+#   max-http-post-size: 1073741824    
+
+management:
+  security:  
+    enabled: false 
+    
+spring:
+  application:
+    name: ignitenode
+    profiles:
+    active:
+      default   
+  jpa:
+      database: MYSQL
+      hibernate:
+        ddl-auto: none
+        dialect:  org.hibernate.dialect.MySQLDialect        
+  datasource:
+        url: jdbc:mysql://127.0.0.1:3306/airlines?zeroDateTimeBehavior=convertToNull&amp;useUnicode=yes&amp;characterEncoding=UTF-8
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver              
+ 
+  
