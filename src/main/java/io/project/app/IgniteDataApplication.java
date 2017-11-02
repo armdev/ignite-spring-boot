@@ -20,9 +20,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class IgniteDataApplication {
 
     public static void main(String[] args) {
+        System.setProperty("IGNITE_QUIET", "false");
         SpringApplication.run(IgniteDataApplication.class, args);
-    }
-
+    }  
    
 
 }

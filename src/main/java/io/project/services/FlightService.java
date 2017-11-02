@@ -8,5 +8,7 @@ public interface FlightService {
     List<Flight> findAll();
 
     Flight findOne(Long id);
+    
+    Flight save(Long id, Flight flight);
 
 }

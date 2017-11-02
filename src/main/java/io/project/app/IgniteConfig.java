@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class IgniteConfig {
 
-    @Bean  
+    @Bean(destroyMethod = "close")
     public Ignite igniteInstance() {
         IgniteConfiguration cfg = new IgniteConfiguration();
         // Setting some custom name for the node.

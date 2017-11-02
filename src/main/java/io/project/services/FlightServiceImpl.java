@@ -12,15 +12,13 @@ import org.springframework.stereotype.Component;
 @Service
 @Component
 public class FlightServiceImpl implements FlightService {
- 
-    
+
     @Autowired
     private FlightRepository flightRepository;
 
-
     @Override
     public List<Flight> findAll() {
-        List<Flight> list = new ArrayList<>();    
+        List<Flight> list = new ArrayList<>();
         list = flightRepository.findAll();
         return list;
     }
@@ -30,5 +28,9 @@ public class FlightServiceImpl implements FlightService {
         return flightRepository.findOne(id);
     }
 
+    @Override
+    public Flight save(Long id, Flight flight) {
+        return flightRepository.save(id, flight);
+    }
 
 }
